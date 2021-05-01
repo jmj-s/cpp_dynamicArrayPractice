@@ -25,6 +25,9 @@ int main() {
     inputData(numNames, numArray);
     sortData(numNames, numArray);
     
+    delete [] numArray;
+    numArray = nullptr;
+    
     return 0;
 }
 
