@@ -31,25 +31,25 @@ int main() {
     return 0;
 }
 
-void inputData(std::size_t numNames, std::string numArray[]) {
+void inputData(std::size_t num, std::string arr[]) {
     
-    for (int i = 0; i < numNames; i++){
+    for (int i = 0; i < num; i++){
         
          std::cout << "Enter Name #" << i+1 << ": ";
          std::string newName {};
          std::getline(std::cin >> std::ws, newName);
-         numArray[i] = newName;
+         arr[i] = newName;
         
      }
 }
 
-void sortData(std::size_t numNames, std::string numArray[]){
+void sortData(std::size_t num, std::string arr[]){
     
-    std::sort(numArray, numArray + numNames);
+    std::sort(arr, arr + num);
     std::cout << "\nOkay, done sorting! Here is your list:\n";
     
-    for (int j = 0; j < numNames; j++){
-        std::cout << "Name #" << j << ": " << numArray[j] << '\n';
+    for (int j = 0; j < num; j++){
+        std::cout << "Name #" << j+1 << ": " << arr[j] << '\n';
     }
     
 }
